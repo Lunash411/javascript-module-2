@@ -15,15 +15,21 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+const paragraphs = document.querySelectorAll("p")
+console.log(paragraphs)
+
 
 
 /*
 Task 2
 ======
 
-When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
-*/
+When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"*/
 
+const alertBtn = document.querySelector("#alertBtn")
+alertBtn.addEventListener("click" , ()=>{
+    alert("Thanks for visiting Bikes for Refugees!")
+})
 
 /*
 Task 3
@@ -31,7 +37,10 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
-
+const changeBackgroundColor = document.querySelector("#alertBtn")
+alertBtn.addEventListener("click" , ()=>{
+    alertBtn("changebackgroundcolor")
+})
 
 /*
 Task 4
