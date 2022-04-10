@@ -60,6 +60,45 @@ var movies = [
 
 // create showMovies function
 
+const allMovies = document.querySelector("#all-movies");
+const moviesNumber = document.querySelector("#movies-number");
+
+const showMovies = (movieArray) => {
+  moviesNumber.textContent = movies.length;
+
+  movieArray.forEach((movie) => {
+    const p = document.createElement("p");
+    p.textContent = `${movie.title} ${movie.director}`;
+    allMovies.appendChild(p);
+  });
+};
+
+const myMovie = {
+  title: "pirates of the caribbean",
+  director: "Gore Verbinski",
+  type: "adventures",
+  haveWatched: true,
+};
+
+const addMovie = (movie) => {
+  console.log(movies);
+  setTimeout(() => {
+    movies.push(movie);
+    console.log(movies);
+    showMovies(movies);
+  }, 2000);
+};
+
+setTimeout(() => {
+  showMovies(movies);
+}, 1000);
+
+setTimeout(() => {
+  addMovie(myMovie);
+}, 2000);
+
+
+
 
 // create a new movie object for your favorite movie
 
