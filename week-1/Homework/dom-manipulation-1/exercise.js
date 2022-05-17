@@ -18,6 +18,18 @@ Write JavaScript below that logs:
 const paragraphs = document.querySelectorAll("p")
 console.log(paragraphs)
 
+const ArrayElement = Array.from(paragraph)
+
+console.log(ArrayElement)
+
+const firstdiv =document.querySelector('.site-header')
+console.log(firstdiv)
+
+const jumbotronText = document.querySelector('jumbotron-text');
+console.log(jumbotronText)
+const primaryContent = document.querySelector(".primary-content");
+console.log(primaryContent)
+
 
 
 /*
@@ -49,6 +61,14 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
+const addSomeText = document.querySelector('#addTextBtn')
+addSomeText.addEventListener('click', ()=>{
+    const newParagragh = document.createElement('p')
+    const newContent = document.createTextNode('LEARN MORE')
+    newParagragh.appendChild(newContent)
+    console.log(newParagragh)
+})
+
 
 
 /*
@@ -57,6 +77,13 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+
+const textShdIncrease = document.querySelector('#largerLinksBtn')
+textShdIncrease.addEventListener('click', ()=>{
+    const text = document.querySelectorAll('a')
+    text.forEach(a => a.style.fontSize = '29px')
+    
+})
 
 
 /*
@@ -68,6 +95,17 @@ When the 'Add' button is clicked, get the text inside the input field and create
 Also clear the text inside the input field
 */
 
+const selectAddButton = document.querySelector("#addArticleBtn");
+const selectInput = document.querySelector("input");
+
+selectAddButton.addEventListener("click", () => {
+  const newParagraphHere = document.createElement("p");
+  newParagraphHere.textContent = selectInput.value;
+  mainArticles.appendChild(newParagraphHere);
+  selectInput.value = "";
+});
+
+
 /*
 Task 7
 ======
@@ -76,4 +114,10 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
+let arrayOfColors = ["#E41", "#8AA", "#8AE5D4", "#EDB0", "#EFF4A5"];
+let colorIndex = 0;
+changeColorButton.addEventListener("click", () => {
+  bodyCol.style.backgroundColor = arrayOfColors[colorIndex];
+  colorIndex = (colorIndex + 1) % arrayOfColors.length;
+});
 
