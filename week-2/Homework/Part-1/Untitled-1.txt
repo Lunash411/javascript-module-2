@@ -1,0 +1,2 @@
+const listsOfItems = ["Milo" , "Sugar" , "Milk"];
+console.log(listsOfItems)

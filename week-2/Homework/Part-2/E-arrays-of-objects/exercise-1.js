@@ -25,11 +25,18 @@ WRITE YOUR CODE BELOW
 */
 
 
-let persons = // Complete here
+let persons = [person1, person2 , person3]// Complete here
 
-let personNames = // Complete here
 
-let personsYoungerThan28YearsOld = // Complete here
+let personNames = function (persons) {
+    return persons.name;
+ }
+ persons.map(personNames) // Complete here
+
+let personsYoungerThan28YearsOld = function(persons) {
+    return persons.age < 28
+ } // Complete here
+ persons.filter(personsYoungerThan28YearsOld)
 
 
 /*

@@ -13,9 +13,21 @@
  *      .....
  * </div>
  */
+
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach(person => {
+    const nameOfPerson = document.createElement('h1')
+    const job = document.createElement('h2')
+    nameOfPerson.textContent = person.name
+    job.textContent = person.job
+    content.appendChild(nameOfPerson)
+    content.appendChild(job)
+  });
+
 }
+
 
 /**
  *
@@ -24,9 +36,18 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
-  //Write your code in here
-}
+function exerciseTwo(shoppingList) {
+  let content = document.querySelector('#content');
+  const list = document.createElement('ul');
+
+  content.appendChild(list);
+
+  shoppingList.forEach((shoppingItem) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = shoppingItem;
+    list.appendChild(listItem);
+  });
+  }
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -58,8 +79,35 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  let content =document.querySelector('#content');
+  const list = document.createElement('ul')
+  content.appendChild(list)
+
+  books.forEach(book => {
+   const listItem = document.createElement('l1');
+   const paragragh = document.createElement('p');
+   const image = document.createElement('img');
+
+   image.src = book.url;
+   // paragraph.textContent = book.title + "--" + book.author;
+   paragragh.textContent = book.title + "--" + book.author;
+
+   if (book.alreadyRead) {
+     listItem.classList.add('alreadyRead');
+   } else {
+     listItem.classList.add('IHaveNotReadThisBook');
+   }
+
+
+   listItem.appendChild(paragragh)
+   listItem.appendChild(Image)
+   list.appendChild(listItem)
+
+  })
 }
+
+  //Write your code in here
+
 
 //
 //
@@ -102,3 +150,5 @@ const books = [
 ];
 
 exerciseThree(books);
+
+

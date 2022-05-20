@@ -40,11 +40,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = Object.keys(capitalCities) ;// Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry = Object.keys(highScores) ;// Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+let destinationNamesMoreThan300KmsAwayByTrain = Object.values(capitalCities) ;// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*

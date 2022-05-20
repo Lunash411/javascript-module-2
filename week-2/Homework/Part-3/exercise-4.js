@@ -59,6 +59,7 @@ let restaurant1 = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
+      
       // Complete here
     },
     findRestaurantServingDish: function (dishName) {

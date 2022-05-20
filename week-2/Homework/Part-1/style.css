@@ -157,3 +157,15 @@ body {
 	   max-height: 80px;
 	}
 }
+
+.alreadyRead {
+	background-color: green;
+}
+
+.IHaveNotReadThisBook {
+	background-color: red;
+}
+
+img {
+	width: 110px;
+}

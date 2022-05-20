@@ -16,4 +16,46 @@ var car = {
 };
 
 */
+var Phone = {
+    brand : "Xiaomi",
+    Model : "Redmi Note 9s",
+    Space  : 128gb,
+    TouchScreen   : "yes"
+
+}
+
+var MotorBike = {
+    brand : "Mistibushi",
+    Model : "Burgman",
+    CC    : 500,
+    seats : 2,
+    ABs   : "yes"
+
+}
+
+var Country = {
+    Country : "Ghana",
+    Capital : "Accra",
+    Population  : 31 million,
+    Regions : 16,
+    President  : "Nana Akuffo Addo"
+
+}
+
+var GameConsole = {
+    brand : "Microsoft",
+    Model : "Xbox 1",
+    Game  : Eldian Ring,
+    Controler : 2,
+
+}
+
+
+var Club = {
+    brand : "Liverpool",
+    Captain : "J Henderson",
+    Trophies    : 65,
+    Coach : Jurgen Klopp,
+    
+}
 
