@@ -12,7 +12,7 @@ let person = {
         currentAddress = newAddress;
     },
     celebrateBirthday: function () {
-        that.age = that.age + 1;
+        this.age = this.age + 1;
     }
 };
 
