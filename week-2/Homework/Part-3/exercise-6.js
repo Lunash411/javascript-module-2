@@ -101,3 +101,76 @@ var mentors = [
 
 //YOUR CODE HERE
 
+// Question 1
+
+const addNewClassAndSkill = mentors.forEach(function (mentor) {
+  if(mentor === 'Barcelona' && mentor.skills.includes('React')){
+    console.log(`Hi, my name is ${mentor.firstName} ${mentor.lastName}. I work in Barcelona and i know React.`);
+  }
+  if (mentor === 'Barcelona') {
+    mentor.class = 'Jun1'
+    mentor.skills.push('SQL')
+  } 
+  
+  mentors.forEach((mentor) => {
+    mentor.addSkill = function (newSkill) {
+      mentor.skills.push(newSkill)
+    }
+
+  })
+  
+  
+})
+
+//4
+function addSkill(mentors,newSkill){
+  mentors.forEach((mentor) => {
+    mentor.skills.push(newSkill)
+  })
+}
+
+
+//5
+function removeSkill(mentors, newSkill){
+  mentors.forEach((mentor) =>{
+    if (mentor.skills.includes(newSkill)) {
+      let elementIndex = mentor.skills.indexOf(newSkill)
+      mentor.skills.slice(elementIndex, 1)
+    }
+  })
+  
+}
+
+//6
+function mentorWithMoreSkills(mentors) {
+  let result = 0
+  let indexOfMentors = 0
+  mentors.forEach((mentor, index) => {
+    if (result < mentor.skills.length) {
+      result = mentor.skills.length
+      indexOfMentors = index
+    }
+
+  })
+  return mentors [indexOfMentors]
+}
+
+//7
+mentors.forEach(mentor => {
+  mentor.addStudentLikes = function () {
+    this.studentLikes++
+  }
+})
+
+//8
+
+function addStudentLikes(mentors){
+   mentors.forEach(mentor => {
+     mentor.studentLikes++
+    })
+
+  
+  }
+  mentorWithMoreSkills(mentors)
+  console.log(mentorWithMoreSkills(mentors));
+

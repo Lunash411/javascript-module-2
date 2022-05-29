@@ -44,6 +44,8 @@ var product2 = {
 
 products.push(product1);
 products.push(product2);
+products.push(product3);
+products.push(product4);
 
 var shoppingCart = {
   totalPrice: 0,
@@ -51,10 +53,18 @@ var shoppingCart = {
 };
 
 function addToShoppingCart(id){
+  if (product.id === id) {
+    shoppingCart.totalPrice = product.price + shoppingCart.totalPrice
+    shoppingCart.selectedProducts.push(product)
+  }
 
 }
 
 function removeFromShoppingCart(id){
+  const positionProduct = shoppingCart.selectedProducts.findIndex(product => products.id === id)
+  console.log(positionProduct);
+  shoppingCart.totalPrice = shoppingCart.totalPrice - shoppingCart.selectedProducts[positionProduct]
+  shoppingCart.selectedProducts = shoppingCart.selectedProducts.filter(product => product.id != id)
 
 }
 

@@ -54,19 +54,31 @@ let restaurant1 = {
   WRITE YOUR CODE BELOW
   */
   
+  const availableRestaurants = (restaurant, numberOfPeople) => {
+    const availableSeats = restaurant.totalSeats - restaurant.numberOfCustomers;
+    return availableSeats >= numberOfPeople;
+  };
+
+  const includesDish = (restaurant, dishName) =>
+  restaurant.menu.includes(dishName);
   let restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      
+      return restaurants
+      .filter((restaurant) => availableRestaurants(restaurant, numberOfPeople))
+      .map((restaurant) => restaurant.name)
       // Complete here
     },
     findRestaurantServingDish: function (dishName) {
-      // Complete here
+      return restaurants
+      .filter((restaurant) => includesDish(restaurant, dishName))
+      .map((restaurant) => restaurant.name) // Complete here
     },
     countNumberOfRestaurantsInArea: function (area) {
-      // Complete here
+      return restaurants.filter((restaurant) => restaurant.address.area === area)
+      .length // Complete here
     },
   };
   

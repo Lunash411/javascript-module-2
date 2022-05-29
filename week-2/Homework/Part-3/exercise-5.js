@@ -42,3 +42,9 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+writers.forEach(function (writer) {
+  if (writer.alive === true) {
+    console.log(`Hi, my name is ${writers.firstName} ${writers.lastName}. I am ${writers.age} years old, and work as a ${writers.occupation}.`);
+  }
+  
+})

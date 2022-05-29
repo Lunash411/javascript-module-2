@@ -37,6 +37,7 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shoppingList) {
+  console.log(shoppingList);
   let content = document.querySelector('#content');
   const list = document.createElement('ul');
 

@@ -16,46 +16,33 @@ var car = {
 };
 
 */
-var Phone = {
-    brand : "Xiaomi",
-    Model : "Redmi Note 9s",
-    Space  : 128gb,
-    TouchScreen   : "yes"
-
+let phone = {
+    brand: 'Xiaomi',
+    model: 'Redmi 9s',
+    year: '2020'
 }
 
-var MotorBike = {
-    brand : "Mistibushi",
-    Model : "Burgman",
-    CC    : 500,
-    seats : 2,
-    ABs   : "yes"
-
+let school = {
+    name: 'Migracode',
+    location: 'Barcelona',
+    course: 'Support IT'
 }
 
-var Country = {
-    Country : "Ghana",
-    Capital : "Accra",
-    Population  : 31 million,
-    Regions : 16,
-    President  : "Nana Akuffo Addo"
-
+let foundation = {
+    name: 'Convent De Santa Clara',
+    location: 'Manresa',
+    purpose: 'Food Bank'
 }
 
-var GameConsole = {
-    brand : "Microsoft",
-    Model : "Xbox 1",
-    Game  : Eldian Ring,
-    Controler : 2,
-
+let gym = {
+    name: 'Cube',
+    location: 'Sant Frutos',
+    course: 'Hit'
 }
 
-
-var Club = {
-    brand : "Liverpool",
-    Captain : "J Henderson",
-    Trophies    : 65,
-    Coach : Jurgen Klopp,
-    
+let motorcycle = {
+    brand: 'Suzuki',
+    horsepower: '500cc',
+    type: 'Automatic'
 }
 
